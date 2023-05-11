@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+  <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
+    <property name="location" value="classpath:cst-conn.properties" />
+  </bean>
+  <bean id="cst_datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <property name="driverClassName" value="${cst_db_driver}" />
+    <property name="url" value="${cst_db_url}" />
+    <property name="username" value="${cst_db_username}" />
+    <property name="password" value="${cst_db_password}" />
+  </bean>
+  <bean id="cst_entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <property name="dataSource" ref="cst_datasource" />
+    <property name="jpaProperties">
+      <props>
+        <prop key="hibernate.hbm2ddl.auto">create</prop>
+      </props>
+    </property>
+    <property name="jpaVendorAdapter">
+      <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+        <property name="showSql" value="false" />
+        <property name="generateDdl" value="true" />
+        <property name="databasePlatform" value="org.hibernate.dialect.MySQL8Dialect" />
+      </bean>
+    </property>
+    <property name="packagesToScan" value="com.cg.bankapp.entity" />
+  </bean>
+  
+  <tx:annotation-driven transaction-manager="txManager"/>
+  
+  <bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager" >
+    <property name="entityManagerFactory" ref="cst_entityManagerFactory" />
+  </bean>
+
+</beans>

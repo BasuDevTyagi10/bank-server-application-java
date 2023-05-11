@@ -1,0 +1,9 @@
+
+________________________________________________________________________________________
+
+Fund Transfer SUCCESSFUL!
+Rs. <amount> TRANSFERRED from Account No. [<fromAccountNo>] to Account No. [<toAccountNo>].
+Updated balance after TRANSFER in [<fromAccountNo>] = Rs. <fromAccountBalance>
+Updated balance after TRANSFER in [<toAccountNo>] = Rs. <toAccountBalance>
+________________________________________________________________________________________
+
