@@ -1,0 +1,12 @@
+________________________________________________________________________________________
+
+MAIN MENU
+► 0. Exit
+► 1. Show Account Balance
+► 2. Deposit Amount
+► 3. Withdraw Amount
+► 4. Transfer Funds
+► 5. Show Last 10 Transactions
+________________________________________________________________________________________
+
+Enter your choice
