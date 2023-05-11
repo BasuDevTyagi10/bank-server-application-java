@@ -1,0 +1,21 @@
+INSERT INTO customer(customer_name) VALUES ("Basudev Tyagi");
+INSERT INTO customer(customer_name) VALUES ("Arjun Upadhyay");
+INSERT INTO customer(customer_name) VALUES ("Sonam Sauntiyal");
+INSERT INTO customer(customer_name) VALUES ("Kartik Singhal");
+INSERT INTO customer(customer_name) VALUES ("Anjali Dabral");
+INSERT INTO customer(customer_name) VALUES ("Tanishka Rana");
+INSERT INTO customer(customer_name) VALUES ("Himanshu Negi"); 
+INSERT INTO customer(customer_name) VALUES ("Garvit Chawla");
+INSERT INTO customer(customer_name) VALUES ("Vivek Chamoli"); 
+INSERT INTO customer(customer_name) VALUES ("Ashish Karki");
+
+INSERT INTO account(account_type, customer_id) VALUES (0, 1);
+INSERT INTO account(account_type, customer_id) VALUES (0, 2);
+INSERT INTO account(account_type, customer_id) VALUES (0, 3);
+INSERT INTO account(account_type, customer_id) VALUES (0, 4);
+INSERT INTO account(account_type, customer_id) VALUES (0, 5);
+INSERT INTO account(account_type, customer_id) VALUES (0, 6);
+INSERT INTO account(account_type, customer_id) VALUES (0, 7);
+INSERT INTO account(account_type, customer_id) VALUES (0, 8);
+INSERT INTO account(account_type, customer_id) VALUES (0, 9);
+INSERT INTO account(account_type, customer_id) VALUES (0, 10);

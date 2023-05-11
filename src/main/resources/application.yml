@@ -1,0 +1,8 @@
+basePackage: com.cg.bankapp
+server:
+  port: 8080
+  servlet:
+    context-path: /bankapp
+spring:
+  profiles:
+    active: local
